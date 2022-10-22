@@ -21,3 +21,16 @@ body,
                     border border-[#d3e2e5] hover:border-gray-300 
                     focus-visible:outline-none;
 }
+
+.leaflet-popup-content {
+  @apply font-bold text-lg leading-[22px] text-[#0089a5] 
+          flex items-center justify-between;
+}
+
+.leaflet-popup-content a {
+  @apply ml-8 p-2 bg-[#f9cd53] rounded-lg transition-colors hover:bg-[#f1c44a];
+}
+
+.leaflet-popup-tip-container {
+  @apply hidden;
+}
