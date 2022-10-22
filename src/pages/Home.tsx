@@ -5,28 +5,35 @@ import LogoWhite from "../assets/LogoWhite";
 
 const Home = () => {
   return (
-    <div className="p-8 sm:px-20 py-10 text-white bg-[#0089A5] h-[100vh]">
-      <div className="flex items-center justify-between">
-        <LogoWhite boxSize={"108"} />
-        <div>
-          <p className="font-extrabold text-xl md:text-[36px] md:leading-[42px]">
-            Araçatuba
-          </p>
-          <p className="font-semibold md:text-[20px] md:leading-[34px]">
-            São Paulo
-          </p>
+    <div className="p-8 sm:px-20 py-10 text-white bg-[#0089A5] h-[100vh]
+                    flex flex-col justify-between">
+      <div className="space-y-3">
+        <div className="flex items-center justify-between">
+          <LogoWhite boxSize={"108"} />
+          <div>
+            <p className="font-extrabold text-xl md:text-[36px] md:leading-[42px]">
+              Araçatuba
+            </p>
+            <p className="font-semibold md:text-[20px] md:leading-[34px]">
+              São Paulo
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div className="flex flex-col lg:flex-row items-start justify-between gap-5">
-        <p
-          className="mt-5 font-semibold text-[34px] sm:text-[42px] max-w-[484px] 
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-5">
+          <p
+            className="mt-5 font-semibold text-[34px] sm:text-[42px] max-w-[484px] 
                       leading-[55px] sm:leading-[66px] tracking-[0.03em]"
-        >
-          Encontre instituições de acolhimento infantil e mude o dia de muitas
-          crianças.
-        </p>
-        <img src={Kids} alt="" className="!max-w-[360px] sm:!max-w-2xl" />
+          >
+            Encontre instituições de acolhimento infantil e mude o dia de muitas
+            crianças.
+          </p>
+          <div className="w-[550px] object-cover">
+            {" "}
+            {/* !max-w-[360px] sm:!max-w-2xl */}
+            <img src={Kids} alt="" className="" />
+          </div>
+        </div>
       </div>
 
       <div className="flex flex-col lg:flex-row items-center justify-between gap-5">

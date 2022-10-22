@@ -3,7 +3,9 @@ import SideBar from "../components/SideBar";
 const InstituteView = () => {
   return (
     <div className="flex">
-      <SideBar />
+      <div className="hidden lg:block w-[22rem]">
+        <SideBar />
+      </div>
       <AllPinsMap />
     </div>
   );

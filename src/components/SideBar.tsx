@@ -3,7 +3,8 @@ import LogoWhite from "../assets/LogoWhite";
 
 const SideBar = () => {
   return (
-    <div className="w-[22rem] h-screen p-10 bg-[#0089A5] text-white flex flex-col  justify-between">
+    <div className="w-[22rem] h-screen p-10 bg-[#0089A5] text-white 
+                  flex flex-col  justify-between fixed">
       <div className="space-y-[32px]">
         <Link to="/">
           <LogoWhite boxSize={"78"} />
