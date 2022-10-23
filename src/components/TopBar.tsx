@@ -16,7 +16,7 @@ const TopBar = () => {
           Selecione a instituição que deseja visitar :)
         </p>
       </div>
-      <Link to="/InstituteView" className="bg-[#FFD666] p-2 rounded-full">
+      <Link to="/InstituteProfile" className="bg-[#FFD666] p-2 rounded-full">
         <Plus size={18} className="text-[#0089A5]" />
       </Link>
     </div>

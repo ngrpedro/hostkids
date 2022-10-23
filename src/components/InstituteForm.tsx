@@ -17,8 +17,8 @@ const InstituteForm = () => {
         </p>
         <div></div>
       </div>
-      <div className="w-full p-10 bg-white rounded-2xl space-y-8">
-        <div className="py-4 border-b border-gray-300">
+      <div className="w-full p-6 md:p-10 bg-white rounded-2xl space-y-8">
+        <div className="md:py-4 border-b border-gray-300">
           <p className="font-semibold text-[28px] leading-[34px] text-[#4d6f80]">
             Dados
           </p>

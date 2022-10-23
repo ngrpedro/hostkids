@@ -8,15 +8,15 @@ body,
 }
 
 .form-input {
-  @apply space-y-2;
+  @apply space-y-2 flex flex-col items-start justify-end;
 }
 
 .form-inputText {
-  @apply font-medium text-base leading-[24px] text-slate-600;
+  @apply font-medium text-sm md:text-base leading-[24px] text-slate-600;
 }
 
 .form-inputInput {
-  @apply w-full py-3 px-6 bg-[#f5f8fa] rounded-md 
+  @apply w-full py-2 px-3 md:py-3 md:px-6 bg-[#f5f8fa] rounded-md 
                     text-base leading-[24px] text-slate-600
                     border border-[#d3e2e5] hover:border-gray-300 
                     focus-visible:outline-none;

@@ -7,7 +7,7 @@ const InstituteProfile = () => {
       <div className="hidden lg:block w-[22rem]">
         <SideBar />
       </div>
-      <div className="flex-1 bg-slate-200 p-16">
+      <div className="flex-1 bg-slate-200 px-4 py-6 md:p-16">
         <InstituteForm />
       </div>
     </div>
