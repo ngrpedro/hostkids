@@ -1,5 +1,6 @@
-import InstituteForm from "../components/InstituteForm";
+/* import InstituteForm from "../components/InstituteForm"; */
 import SideBar from "../components/SideBar";
+import InstituteDetails from './InstituteDetails';
 
 const InstituteProfile = () => {
   return (
@@ -8,7 +9,8 @@ const InstituteProfile = () => {
         <SideBar />
       </div>
       <div className="flex-1 bg-slate-200 px-4 py-6 md:p-16">
-        <InstituteForm />
+        {/* <InstituteForm />  */}
+        <InstituteDetails />
       </div>
     </div>
   );
