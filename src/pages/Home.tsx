@@ -5,7 +5,7 @@ import LogoWhite from "../assets/LogoWhite";
 
 const Home = () => {
   return (
-    <div className="p-8 sm:px-20 py-10 text-white bg-[#0089A5] lg:h-[100vh]
+    <div className="p-8 sm:px-20 py-10 text-white bg-[#0089A5] h-[100vh]
                     flex flex-col justify-between">
       <div className="space-y-3">
         <div className="flex items-center justify-between">
