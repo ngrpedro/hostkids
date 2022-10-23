@@ -4,14 +4,16 @@ import TopBar from "../components/TopBar";
 
 const InstituteView = () => {
   return (
-    <div className="flex relative">
+    <div className="flex flex-col relative">
       <div className="block lg:hidden">
         <TopBar />
       </div>
       <div className="hidden lg:block w-[22rem]">
         <SideBar />
       </div>
-      <AllPinsMap />
+      <div className="">
+        <AllPinsMap />
+      </div>
     </div>
   );
 };
