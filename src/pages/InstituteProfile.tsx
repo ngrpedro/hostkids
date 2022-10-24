@@ -1,4 +1,5 @@
-import { Alarm, Info, WhatsappLogo } from "phosphor-react";
+import { Alarm, ArrowLeft, Info, WhatsappLogo } from "phosphor-react";
+import { Link } from "react-router-dom";
 
 const InstituteProfile = () => {
   return (
@@ -7,6 +8,11 @@ const InstituteProfile = () => {
         className="bg-[#0089A5] p-8 md:pt-20 pb-28 md:px-14 
                 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8"
       >
+        <div className="md:hidden">
+          <Link to="/InstituteView">
+            <ArrowLeft size={28} color={"#fff"} />
+          </Link>
+        </div>
         <div className="flex flex-col items-start justify-start gap-6">
           <h1 className="text-[34px] leading-[54px] text-white">
             Inst. Cuidado e Amor
@@ -57,7 +63,10 @@ const InstituteProfile = () => {
               Mais detalhes de visita
             </h1>
 
-            <WhatsappLogo size={48} className="hover:animate-bounce cursor-pointer" />
+            <WhatsappLogo
+              size={48}
+              className="hover:animate-bounce cursor-pointer"
+            />
           </div>
           <p className="text-lg leading-[28px] text-gray-900">
             Exercitation laborum labore minim excepteur incididunt quis enim.

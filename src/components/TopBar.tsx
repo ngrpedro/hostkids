@@ -22,7 +22,7 @@ const TopBar = () => {
           HOSTKIDS
         </p>
       </div>
-      <div className="flex gap-2">
+      <div className="hidden md:flex gap-2 ">
         <Link
           to="/InstituteView"
           className="rounded-md p-2 px-6 text-sm flex items-center justify-center bg-white text-[#11505c] gap-4
