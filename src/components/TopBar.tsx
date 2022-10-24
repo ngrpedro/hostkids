@@ -32,7 +32,7 @@ const TopBar = () => {
           Ver tudo no mapa
         </Link>
         <Link
-          to="/InstituteView"
+          to="/ContactUs"
           className="rounded-md p-2 px-6 text-sm flex items-center justify-center bg-white text-[#11505c] gap-2
                 group-hover:bg-[#0089A5] group-hover:text-white transition-colors"
         >

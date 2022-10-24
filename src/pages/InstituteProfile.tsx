@@ -1,5 +1,6 @@
 import { Alarm, ArrowLeft, Info, WhatsappLogo } from "phosphor-react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const InstituteProfile = () => {
   return (
@@ -95,8 +96,7 @@ const InstituteProfile = () => {
           </p>
         </div>
       </main>
-
-      <footer className="bg-[#0089A5] p-10"></footer>
+      <Footer />
     </div>
   );
 };
