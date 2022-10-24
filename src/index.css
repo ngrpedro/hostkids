@@ -34,3 +34,7 @@ body,
 .leaflet-popup-tip-container {
   @apply hidden;
 }
+
+.leaflet-popup-content p {
+  @apply text-sm my-0;
+}

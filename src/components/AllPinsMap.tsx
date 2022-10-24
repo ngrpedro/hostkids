@@ -14,7 +14,7 @@ const AllPinsMap = () => {
       <MapContainer
         center={[-21.1839454, -50.4384078]}
         zoom={14}
-        scrollWheelZoom={false}
+        scrollWheelZoom={true}
         style={{ width: "100vw", height: "100vh" }}
       >
         <TileLayer
@@ -30,7 +30,7 @@ const AllPinsMap = () => {
                 maxWidth={240}
                 className={"font-bold"}
               >
-                Lar Acolhida
+                <p>Inst. Amor e Carinho</p>
                 <Link to="/InstituteProfile">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ const AllPinsMap = () => {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6"
+                    className="w-4 h-"
                   >
                     <path
                       strokeLinecap="round"
