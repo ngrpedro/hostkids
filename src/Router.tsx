@@ -6,7 +6,7 @@ import InstituteView from "./pages/InstituteView";
 const Router = () => {
   return (
     <Routes>
-        <Route path="/" element={<Home/>}/>InstituteProfile
+        <Route path="/" element={<Home/>}/>
         <Route path="/InstituteView" element={<InstituteView />}/>
         <Route path="/InstituteProfile" element={<InstituteProfile />}/>
     </Routes>

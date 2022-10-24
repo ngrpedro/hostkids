@@ -10,7 +10,7 @@ const AllPinsMap = () => {
   ];
 
   return (
-    <div className="w-[300px] z-10">
+    <div className="w-[300px] relative">
       <MapContainer
         center={[-21.1839454, -50.4384078]}
         zoom={14}

@@ -4,12 +4,12 @@ import whatsapp from '../assets/whatsapp.png';
 
 const InstituteDetails = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-6 scroll-y-8">
+    <div className="max-w-3xl m-auto flex flex-col items-center justify-center gap-6 scroll-y-8">
       <div className="w-full flex items-center justify-between">
         <Link to="/InstituteView">
           <ArrowCircleLeft
             size={32}
-            className="text-slate-600 block lg:hidden"
+            className="text-slate-600 block"
           />
         </Link>
         <p className="font-medium text-base text-slate-600">
