@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const Forms = () => {
   return (
-    <div className="space-y-10 mb-20">
+    <div className="space-y-10 mb-20 ">
       <header
-        className="bg-[#0089A5] p-8 md:pt-20 pb-28 md:px-14 
+        className="bg-[#0089A5] p-8 md:pt-20 pb-28 md:px-14
                 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8"
       >
         <div className="md:hidden">
@@ -26,9 +26,11 @@ const Forms = () => {
         </div>
       </header>
 
-      <div className="max-w-5xl m-auto space-y-8 mx-10">
-        <h1 className="text-[26px] leading-[54px] text-gray-700
-        ">
+      <div className="lg:max-w-5xl lg:m-auto space-y-8 mx-10">
+        <h1
+          className="text-[26px] leading-[54px] text-gray-700
+        "
+        >
           Ut elit incididunt mollit.
         </h1>
         <div></div>

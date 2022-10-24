@@ -40,7 +40,7 @@ const TopBar = () => {
           Deseja cadastrar uma instituição?
         </Link>
       </div>
-      <div>
+      <div className="md:hidden">
         <Link
           to="/ContactUs"
           className="flex items-center text-sm gap-3 text-[#fcdd89] font-medium underline underline-offset-4 text-end

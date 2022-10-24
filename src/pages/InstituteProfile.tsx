@@ -48,11 +48,14 @@ const InstituteProfile = () => {
         </div>
       </header>
 
-      <div className="relative">
+      <div className="relative hidden md:block">
         <div
-          className="flex items-start gap-8 p-4 mb-5 
+          className="flex items-start gap-6 p-4 mb-5 md:px-14 
               absolute -top-[60px] flex-wrap"
         >
+          <div className="w-48 h-32 bg-gray-300 rounded-md m-auto"></div>
+          <div className="w-48 h-32 bg-gray-300 rounded-md m-auto"></div>
+          <div className="w-48 h-32 bg-gray-300 rounded-md m-auto"></div>
           <div className="w-48 h-32 bg-gray-300 rounded-md m-auto"></div>
         </div>
       </div>
