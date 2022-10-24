@@ -26,7 +26,7 @@ const Forms = () => {
         </div>
       </header>
 
-      <div className="max-w-5xl m-auto space-y-8">
+      <div className="max-w-5xl m-auto space-y-8 mx-10">
         <h1 className="text-[26px] leading-[54px] text-gray-700
         ">
           Ut elit incididunt mollit.
@@ -57,8 +57,8 @@ const Forms = () => {
         </div>
 
         <button
-          className="w-full bg-[#37c77f] rounded-md py-4 flex items-center justify-center gap-5
-                text-white font-semibold text-lg leading-[26px]"
+          className="w-full bg-[#37c77f] rounded-md py-2 md:py-4 flex items-center justify-center gap-5
+                text-white md:font-semibold md:text-lg leading-[26px]"
         >
           Enviar
           <PaperPlaneTilt size={20} />

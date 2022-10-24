@@ -40,6 +40,15 @@ const TopBar = () => {
           Deseja cadastrar uma instituição?
         </Link>
       </div>
+      <div>
+        <Link
+          to="/ContactUs"
+          className="flex items-center text-sm gap-3 text-[#fcdd89] font-medium underline underline-offset-4 text-end
+          group-hover:text-[#0089A5]"
+        >
+          Deseja cadastrar uma instituição?
+        </Link>
+      </div>
     </div>
   );
 };
