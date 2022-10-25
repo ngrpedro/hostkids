@@ -18,7 +18,7 @@ const AllPinsMap = ({ w, h }: AllPinsMapProps) => {
     <div className="">
       <MapContainer
         center={[-21.1839454, -50.4384078]}
-        zoom={14}
+        zoom={13}
         scrollWheelZoom={true}
         style={{ width: `${w}`, height: `${h}` }}
       >

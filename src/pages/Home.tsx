@@ -1,6 +1,5 @@
 import { ArrowRight } from "phosphor-react";
 import { Link } from "react-router-dom";
-import bola from "../assets/bola.png";
 import Toys from "../assets/toys.png";
 
 const Home = () => {
@@ -12,7 +11,8 @@ const Home = () => {
       <div className="space-y-12">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-5">
-            <img src={bola} alt="" className="w-14" />
+            {/* <img src={bola} alt="" className="w-14" /> */}
+            <p className="text-[#FFBD12]  tracking-wider font-extrabold text-[44px]">hostkids</p>
           </div>
           <div>
             <p className="font-extrabold text-xl md:text-[26px] md:leading-[22px]">
