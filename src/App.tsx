@@ -1,12 +1,12 @@
 import "leaflet/dist/leaflet.css";
 import { BrowserRouter } from "react-router-dom";
-import TopBar from "./components/TopBar";
+import NavBar from "./components/NavBar";
 import Router from "./Router";
 
 function App() {
   return (
     <BrowserRouter>
-      <TopBar />
+      <NavBar />
       <Router />
     </BrowserRouter>
   );

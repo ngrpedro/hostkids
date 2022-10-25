@@ -4,7 +4,7 @@
 
 body,
 * {
-  @apply font-sans;
+  @apply font-mont;
 }
 
 .form-input {
@@ -37,4 +37,8 @@ body,
 
 .leaflet-popup-content p {
   @apply text-sm my-0;
+}
+
+.box-shadow-black {
+  box-shadow: 0px 4px;
 }
