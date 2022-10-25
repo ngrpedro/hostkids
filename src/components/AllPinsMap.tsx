@@ -2,7 +2,12 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { Link } from "react-router-dom";
 import mapIcon from "../utils/mapIcon";
 
-const AllPinsMap = () => {
+interface AllPinsMapProps {
+  w: string;
+  h: string;
+}
+
+const AllPinsMap = ({ w, h }: AllPinsMapProps) => {
   const position: [number, number][] = [
     [-21.1806395, -50.4204816],
     [-21.1916682, -50.4420556],
@@ -10,12 +15,12 @@ const AllPinsMap = () => {
   ];
 
   return (
-    <div className="w-[300px] relative">
+    <div className="">
       <MapContainer
         center={[-21.1839454, -50.4384078]}
         zoom={14}
         scrollWheelZoom={true}
-        style={{ width: "100vw", height: "100vh" }}
+        style={{ width: `${w}`, height: `${h}` }}
       >
         <TileLayer
           url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicGVkcm8zOTkiLCJhIjoiY2w5ZzFpODZmMnY3dDQxbXZxems2cDYzMiJ9.ZO5_rVpmfVgQzIBfGCFN0g`}
