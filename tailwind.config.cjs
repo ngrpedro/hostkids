@@ -4,8 +4,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'mont': ['Montserrat', 'sans-serif']
-      }
+        mont: ["Montserrat", "sans-serif"],
+      },
+      boxShadow: {
+        black: " 0px 4px",
+      },
     },
   },
   plugins: [],

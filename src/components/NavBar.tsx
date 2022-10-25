@@ -7,12 +7,14 @@ const NavBar = () => {
               flex items-center justify-between gap-3 border-b-2 border-black"
     >
       <Link to="/">
-        <p className="text-[#FFBD12] font-extrabold tracking-wider text-[26px]">hostkids</p>
+        <p className="text-[#FFBD12] font-extrabold tracking-wider text-[26px]">
+          hostkids
+        </p>
       </Link>
       <div className="flex items-center justify-between gap-3">
         <Link
           to="/InstituteView"
-          className=" p-[10px] font-extrabold flex items-center justify-center gap-3"
+          className=" p-[10px font-extrabold flex items-center justify-center gap-3"
         >
           Ver mapa
         </Link>{" "}
