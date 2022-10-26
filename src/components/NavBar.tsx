@@ -7,8 +7,8 @@ const NavBar = () => {
               flex items-center justify-between gap-3 border-b-2 border-black"
     >
       <Link to="/">
-        <p className="text-[#FFBD12] font-extrabold tracking-wider text-[26px]">
-          hostkids
+        <p className="text-[#18191F] font-extrabold tracking-wider text-[26px]">
+          host<span className="text-[#FFBD12]">kids</span>
         </p>
       </Link>
       <div className="flex items-center justify-between gap-3">

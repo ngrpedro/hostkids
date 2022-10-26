@@ -12,7 +12,7 @@ const Home = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-5">
             {/* <img src={bola} alt="" className="w-14" /> */}
-            <p className="text-[#FFBD12]  tracking-wider font-extrabold text-[44px]">hostkids</p>
+            <p className="text-[#18191F]  tracking-wider font-extrabold text-[44px]">host<span className="text-[#FFBD12]">kids</span></p>
           </div>
           <div>
             <p className="font-extrabold text-xl md:text-[26px] md:leading-[22px]">
