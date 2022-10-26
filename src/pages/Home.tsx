@@ -26,7 +26,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-20 max-w-[1300px]">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-20">
           <div className="flex flex-col items-start gap-16">
             <p
               className="mt-5 font-extrabold text-[34px] md:text-[42px] max-w-[484px] 
@@ -48,7 +48,7 @@ const Home = () => {
             </p>
           </div>
           <div className="">
-            <img src={Toys} alt="" className="w-[32rem]" />
+            <img src={Toys} alt="" className="w-[32rem] m-auto" />
           </div>
         </div>
       </div>
