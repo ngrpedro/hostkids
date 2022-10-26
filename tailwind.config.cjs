@@ -8,8 +8,9 @@ module.exports = {
       },
       boxShadow: {
         black: " 0px 4px",
+        black2px: " 2px 2px",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 };

@@ -12,7 +12,9 @@ const Home = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-5">
             {/* <img src={bola} alt="" className="w-14" /> */}
-            <p className="text-[#18191F]  tracking-wider font-extrabold text-[44px]">host<span className="text-[#FFBD12]">kids</span></p>
+            <p className="text-[#18191F]  tracking-wider font-extrabold text-[44px]">
+              host<span className="text-[#FFBD12]">kids</span>
+            </p>
           </div>
           <div>
             <p className="font-extrabold text-xl md:text-[26px] md:leading-[22px]">
@@ -40,6 +42,10 @@ const Home = () => {
               Ver Instituições no mapa
               <ArrowRight size={18} weight="bold" />
             </Link>
+            <p className="font-semibold text-[17px] leading-[28px] max-w-2xl">
+              Tenha acesso as informações de instituições de acolhimento
+              infantil da sua cidade e mude o dia de muitas crianças
+            </p>
           </div>
           <div className="">
             <img src={Toys} alt="" className="w-[32rem]" />
@@ -47,12 +53,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-5">
-        <p className="font-semibold text-[17px] leading-[28px] max-w-2xl">
-          Tenha acesso as informações de instituições de acolhimento infantil da
-          sua cidade e mude o dia de muitas crianças
-        </p>
-      </div>
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-5"></div>
     </div>
   );
 };

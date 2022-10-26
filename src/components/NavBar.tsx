@@ -19,13 +19,13 @@ const NavBar = () => {
           Ver mapa
         </Link>{" "}
         <Link
-          to="/InstituteView"
+          to="/InstituteProfile"
           className=" p-[10px] font-extrabold flex items-center justify-center gap-3"
         >
           Nova instituição
         </Link>
         <Link
-          to="/InstituteView"
+          to="/ContactUs"
           className=" p-[10px] font-extrabold flex items-center justify-center gap-3"
         >
           Fale com a gente
