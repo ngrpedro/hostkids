@@ -10,7 +10,7 @@ const InstituteView = () => {
     <div className="h-screen">
       <div className="col-span-2 lg:h-72 grid grid-cols-1 md:grid-cols-2 p-4 md:p-10 gap-8">
         <div className="flex flex-col items-start gap-8 m-auto">
-          <p className="font-extrabold text-[18px] md:text-[24px] sm:leading-[36px] tracking-[0.03em]">
+          <p className="font-extrabold text-[22px] md:text-[24px] sm:leading-[36px] tracking-[0.03em]">
             Encontre instituições de acolhimento infantil
           </p>
           <p className="font-semibold text-[16px] leading-[28px]">
