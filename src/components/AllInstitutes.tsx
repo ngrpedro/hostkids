@@ -1,23 +1,22 @@
-import { ArrowRight, MagnifyingGlass } from "phosphor-react";
-import { Link } from "react-router-dom";
+import { MagnifyingGlass } from "phosphor-react";
 
 const AllInstitutes = () => {
   const institutes = [
     {
       name: "Caminho das ciranças",
       adress: "Rua Santos Bilac, 6584 - Monterrey",
+      openWeekends: true,
     },
     {
       name: "Crianças e alegria",
       adress: "Rua Santos Bilac, 6584 - Monterrey",
+      openWeekends: false,
     },
-    { name: "Sempre juntos", adress: "Rua Santos Bilac, 6584 - Monterrey" } /* 
-    { name: "Olhar e amor", adress: "Rua Santos Bilac, 6584 - Monterrey" },
     {
-      name: "Instituição Caminhando",
+      name: "Sempre juntos",
       adress: "Rua Santos Bilac, 6584 - Monterrey",
+      openWeekends: true,
     },
-    { name: "Sempre ciranças", adress: "Rua Santos Bilac, 6584 - Monterrey" }, */,
   ];
   return (
     <div>
@@ -32,51 +31,38 @@ const AllInstitutes = () => {
         </button>
       </div>
       <div
-        className="flex flex-wrap gap-5 md:p-4 h-[38rem] m-4 overflow-y-auto scrollbar-thin
+        className="flex flex-wrap gap-12 md:p-4 h-[38rem] m-4 overflow-y-auto scrollbar-thin
                  scrollbar-thumb-gray-300 scrollbar-track-gray-100"
       >
         {institutes.map((item, index) => {
-          const { name, adress } = item;
+          const { name, adress, openWeekends } = item;
           return (
-            <div key={index}>
-              <div className="space-y-6">
-                <div className="w-full h-36 bg-gray-200 rounded-md">
-                  <img src="" alt="" />
-                </div>
-                <div className="space-y-1">
-                  <p className="font-extrabold text-[17px] leading-[22px]">
-                    {name}
-                  </p>
-                  <p className="font-bold text-[#F95A2C]">{adress}</p>
-                  <Link
-                    to="/InstituteProfile"
-                    className="py-2 pr-2 font-semibold text-sm flex items-center justify-start gap-3 hover:underline underline-offset-2 transition-all"
-                  >
-                    Conhecer
-                    <ArrowRight size={18} weight="bold" />
-                  </Link>
-                </div>
+            <div
+              key={index}
+              className="max-w-md mx-auto md:mx-0 bg-white rounded-xl shadow-md overflow-hidden md:max-w-xl"
+            >
+              <div className="md:shrink-1 bg-gray-200">
+                <img className="h-48 w-full object-cover" src="" alt="" />
               </div>
-              {/*               <div className="border border-gray-900 rounded-md">
-                <div className="bg-gray-300 h-60 w-full rounded-t-md"></div>
-                <div className="p-4 flex flex-col gap-2">
-                  <p className="font-extrabold text-[17px] leading-[22px]">
-                    {name}
-                  </p>
-                  <span className="font-bold text-xs text-[#F95A2C]">
-                    {adress}
-                  </span>
-                  <div className="w-32">
-                    <Link
-                      to="/InstituteProfile"
-                      className="py-2 pr-2 font-semibold text-sm flex items-center justify-start gap-3 hover:underline underline-offset-2 transition-all"
-                    >
-                      Conhecer
-                      <ArrowRight size={18} weight="bold" />
-                    </Link>
+              <div className="p-6 space-y-2">
+                {openWeekends ? (
+                  <div
+                    className="flex items-center justify-start px-4 py-1 w-[12rem]
+                    uppercase tracking-wide text-sm text-white bg-green-700 font-semibold rounded-sm"
+                  >
+                    Finais de semana
                   </div>
-                </div>
-              </div> */}
+                ) : (
+                  ""
+                )}
+                <a
+                  href="#"
+                  className="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
+                >
+                  {name}
+                </a>
+                <p className="mt-2 text-slate-600">{adress}</p>
+              </div>
             </div>
           );
         })}

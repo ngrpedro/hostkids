@@ -5,9 +5,8 @@ import AllPinsMap from "../components/AllPinsMap";
 
 const InstituteView = () => {
   const [mapView, setMapView] = useState(true);
-  console.log(mapView);
   return (
-    <div className="h-screen space-y-10">
+    <div className="h-screen space-y-10 mb-16">
       <div className=" bg-[#F4F5F7] col-span-2 lg:h-72 grid grid-cols-1 md:grid-cols-2 px-4 py-10 md:px-10 gap-8">
         <div className="flex flex-col items-start gap-8 m-auto">
           <p className="text-[34px] font-bold leading-[54px] text-black">
