@@ -1,10 +1,13 @@
 import { Info } from "phosphor-react";
+import { useState } from "react";
 import AllInstitutes from "../components/AllInstitutes";
 import AllPinsMap from "../components/AllPinsMap";
 
 const InstituteView = () => {
+  const [mapView, setMapView] = useState(true);
+  console.log(mapView);
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 h-screen">
+    <div className="h-screen">
       <div className="col-span-2 lg:h-72 grid grid-cols-1 md:grid-cols-2 p-4 md:p-10 gap-8">
         <div className="flex flex-col items-start gap-8 m-auto">
           <p className="font-extrabold text-[18px] md:text-[24px] sm:leading-[36px] tracking-[0.03em]">
@@ -36,10 +39,35 @@ const InstituteView = () => {
           </div>
         </div>
       </div>
-      <div className="hidden md:block">
+      <div className="hidden md:grid grid-cols-1 md:grid-cols-2 ">
         <AllInstitutes />
+        <AllPinsMap />
       </div>
-      <AllPinsMap />
+
+      {/* *********
+       ********** */}
+      <div className="md:hidden">
+        <div className="col-span-2 flex items-center justify-center p-4">
+          <button
+            className={`p-2 text-sm font-semibold rounded-l-2xl w-full ${
+              mapView ? "bg-[#FFBD12]" : "bg-[#ffebb7]"
+            }`}
+            onClick={() => setMapView(true)}
+          >
+            Ver Mapa
+          </button>
+          <button
+            className={`p-2 text-sm font-semibold rounded-r-2xl w-full ${
+              !mapView ? "bg-[#FFBD12]" : "bg-[#ffebb7]"
+            }`}
+            onClick={() => setMapView(false)}
+          >
+            Ver Lista
+          </button>
+        </div>
+
+        {mapView ? <AllPinsMap /> : <AllInstitutes />}
+      </div>
     </div>
   );
 };
