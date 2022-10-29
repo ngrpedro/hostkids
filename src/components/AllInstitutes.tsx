@@ -1,4 +1,5 @@
-import { MagnifyingGlass } from "phosphor-react";
+import { ArrowRight, Image, MagnifyingGlass } from "phosphor-react";
+import { Link } from "react-router-dom";
 
 const AllInstitutes = () => {
   const institutes = [
@@ -15,7 +16,17 @@ const AllInstitutes = () => {
     {
       name: "Sempre juntos",
       adress: "Rua Santos Bilac, 6584 - Monterrey",
+      openWeekends: false,
+    },
+    {
+      name: "Sempre juntos",
+      adress: "Rua Santos Bilac, 6584 - Monterrey",
       openWeekends: true,
+    },
+    {
+      name: "Sempre juntos",
+      adress: "Rua Santos Bilac, 6584 - Monterrey",
+      openWeekends: false,
     },
   ];
   return (
@@ -31,7 +42,7 @@ const AllInstitutes = () => {
         </button>
       </div>
       <div
-        className="flex flex-wrap gap-12 md:p-4 h-[38rem] m-4 overflow-y-auto scrollbar-thin
+        className="flex flex-wrap gap-8 md:p-4 h-[38rem] m-4 overflow-y-auto scrollbar-thin
                  scrollbar-thumb-gray-300 scrollbar-track-gray-100"
       >
         {institutes.map((item, index) => {
@@ -39,29 +50,33 @@ const AllInstitutes = () => {
           return (
             <div
               key={index}
-              className="max-w-md mx-auto md:mx-0 bg-white rounded-xl shadow-md overflow-hidden md:max-w-xl"
+              className="max-w-sm mx-auto md:mx-0 bg-white rounded-xl overflow-hidden"
             >
-              <div className="md:shrink-1 bg-gray-200">
-                <img className="h-48 w-full object-cover" src="" alt="" />
+              <div className="md:shrink-0 bg-gray-200">
+                <Image size={28} className="h-44 m-auto object-cover" />
               </div>
-              <div className="p-6 space-y-2">
+              <div className="m-auto md:m-0 p-4 space-y-2 md:space-y-4">
                 {openWeekends ? (
-                  <div
-                    className="flex items-center justify-start px-4 py-1 w-[12rem]
-                    uppercase tracking-wide text-sm text-white bg-green-700 font-semibold rounded-sm"
-                  >
+                  <span className="rounded-full border border-green-900 bg-green-200 text-green-900 py-1 px-4 text-xs">
                     Finais de semana
-                  </div>
+                  </span>
                 ) : (
                   ""
                 )}
-                <a
-                  href="#"
-                  className="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
+                <div className="space-y-2">
+                  <div className="block mt-1 text-xs leading-tight font-medium text-black">
+                    {name}
+                  </div>
+                  <p className="mt-2 text-xs text-slate-600">{adress}</p>
+                </div>
+
+                <Link
+                  to="/"
+                  className="flex items-start justify-start gap-2 hover:underline underline-offset-1"
                 >
-                  {name}
-                </a>
-                <p className="mt-2 text-slate-600">{adress}</p>
+                  <p className="text-xs text-slate-600">Conhecer</p>
+                  <ArrowRight size={16} className="text-slate-600" />
+                </Link>
               </div>
             </div>
           );

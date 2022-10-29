@@ -55,7 +55,9 @@ const InstituteView = () => {
         <div className="col-span-2 flex items-center justify-center p-4">
           <button
             className={`p-2 text-sm font-semibold rounded-l-2xl w-full ${
-              mapView ? "bg-[#FFBD12]" : "bg-[#ffebb7]"
+              mapView
+                ? "bg-[#bac7fc] border border-[#122aff] text-[#122aff]"
+                : "bg-gray-200"
             }`}
             onClick={() => setMapView(true)}
           >
@@ -63,7 +65,9 @@ const InstituteView = () => {
           </button>
           <button
             className={`p-2 text-sm font-semibold rounded-r-2xl w-full ${
-              !mapView ? "bg-[#FFBD12]" : "bg-[#ffebb7]"
+              !mapView
+                ? "bg-[#bac7fc] border border-[#122aff] text-[#122aff]"
+                : "bg-gray-200"
             }`}
             onClick={() => setMapView(false)}
           >

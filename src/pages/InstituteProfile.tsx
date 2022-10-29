@@ -91,8 +91,8 @@ const InstituteProfile = () => {
             Lorem sint fugiat sit sint esse ipsum minim id magna officia.
           </p>
           <p className="text-lg leading-[28px] text-black">
-            Et mollit officia nulla magna incididunt in velit officia.
-            Lorem sint fugiat sit sint esse ipsum minim id magna officia.
+            Et mollit officia nulla magna incididunt in velit officia. Lorem
+            sint fugiat sit sint esse ipsum minim id magna officia.
           </p>
         </div>
 
@@ -107,6 +107,7 @@ const InstituteProfile = () => {
           </p>
         </div>
       </main>
+
       <Footer />
     </div>
   );
