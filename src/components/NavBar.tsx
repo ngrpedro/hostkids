@@ -1,3 +1,4 @@
+import { Rows } from "phosphor-react";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -11,13 +12,13 @@ const NavBar = () => {
           host<span className="text-[#FFBD12]">kids</span>
         </p>
       </Link>
-      <div className="flex items-center justify-between gap-3">
+      <div className="hidden md:flex items-center justify-between gap-3">
         <Link
           to="/InstituteView"
           className=" p-[10px font-extrabold flex items-center justify-center gap-3"
         >
           Ver mapa
-        </Link>{" "}
+        </Link>
         <Link
           to="/InstituteProfile"
           className=" p-[10px] font-extrabold flex items-center justify-center gap-3"
@@ -30,6 +31,9 @@ const NavBar = () => {
         >
           Fale com a gente
         </Link>
+      </div>
+      <div className="block md:hidden">
+        <Rows size={28} />
       </div>
     </div>
   );
