@@ -39,8 +39,13 @@ const InstituteView = () => {
           </div>
         </div>
       </div>
+      <div className="px-4 md:px-10">
+        <p className="font-semibold text-[22px] leading-[28px]">
+          Veja nossos parceiros:
+        </p>
+      </div>
 
-      <div className="hidden md:grid grid-cols-1 md:grid-cols-2 ">
+      <div className="hidden md:grid grid-cols-1 md:grid-cols-2 px-4 md:px-6">
         <AllInstitutes />
         <AllPinsMap />
       </div>

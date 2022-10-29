@@ -25,6 +25,7 @@ const AllInstitutes = () => {
         <input
           type="text"
           className="py-2 px-4  rounded-l-md bg-gray-100 w-full"
+          placeholder="Pesquisar"
         />
         <button className="p-3 rounded-r-md bg-[#FFBD12]">
           <MagnifyingGlass size={24} />
