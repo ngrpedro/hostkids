@@ -39,7 +39,7 @@ const NavBar = () => {
         </button>
 
         {open ? (
-          <ul className="absolute top-[72px] left-0 bg-white w-full">
+          <ul className="absolute top-[72px] rounded-bl-3xl shadow-2xl right-0 bg-white w-[60vw] h-[60vh]">
             <li>
               {menus.map((item, index) => {
                 return (
@@ -47,7 +47,7 @@ const NavBar = () => {
                     key={index}
                     to={`/${item.view}`}
                     onClick={() => setOpen(!open)}
-                    className=" p-[10px] font-extrabold flex items-center justify-center gap-3"
+                    className="py-[22px] font-extrabold flex items-center justify-center gap-3"
                   >
                     {item.menu}
                   </Link>
