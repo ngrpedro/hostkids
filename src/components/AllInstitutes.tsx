@@ -31,15 +31,27 @@ const AllInstitutes = () => {
   ];
   return (
     <div>
-      <div className="p-4 max-w-sm flex">
-        <input
-          type="text"
-          className="py-2 px-4 rounded-l-md bg-gray-100 w-full"
-          placeholder="Pesquisar"
-        />
-        <button className="p-3 rounded-r-md bg-[#FFBD12]">
-          <MagnifyingGlass size={24} />
-        </button>
+      <div className="grid grid-cols-2 items-center justify-center">
+        <div className="p-4 flex">
+          <input
+            type="text"
+            className="py-2 px-4 rounded-l-md bg-gray-100 w-full"
+            placeholder="Pesquisar"
+          />
+          <button className="p-3 rounded-r-md bg-[#FFBD12]">
+            <MagnifyingGlass size={24} />
+          </button>
+        </div>
+        <div className="py-2 px-4">
+          <select
+            name=""
+            id=""
+            className="py-[14px] px-4 rounded-md bg-gray-100 w-full"
+          >
+            <option value="">teste</option>
+            <option value="">teste</option>
+          </select>
+        </div>
       </div>
       <div
         className="flex flex-wrap gap-8 md:p-4 h-[38rem] m-4 overflow-y-auto scrollbar-thin
@@ -67,7 +79,7 @@ const AllInstitutes = () => {
                   <div className="block mt-1 text-xs leading-tight font-medium text-black">
                     {name}
                   </div>
-                  <p className="mt-2 text-xs text-slate-600">{adress}</p>
+                  <p className="mt-2 text-xs text-slate-600 max-w-xs">{adress}</p>
                 </div>
 
                 <Link
