@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <div
-      className="bg-[#F6EFD9] p-4 md:px-14 md:py-5 group delay-100
-              flex items-center justify-between gap-3 border-b-2 border-black"
+      className=" p-4 md:px-14 md:py-5 group delay-100
+              flex items-center justify-between gap-3 border-b border-black"
     >
       <Link to="/">
         <p className="text-[#18191F] font-extrabold tracking-wider text-[26px]">
