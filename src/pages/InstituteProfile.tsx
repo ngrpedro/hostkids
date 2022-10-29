@@ -6,7 +6,7 @@ const InstituteProfile = () => {
   return (
     <div>
       <header
-        className="bg-[#F4F5F7] border-b border-black p-8 md:pt-20 pb-28 md:px-14 
+        className="bg-[#F4F5F7]  p-8 md:pt-20 pb-28 md:px-14 
                 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8"
       >
         <div className="md:hidden">
@@ -29,21 +29,21 @@ const InstituteProfile = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 items-center gap-5">
-          <div className="border-2 border-black bg-blue-500 rounded-lg p-4 md:p-6 box-shadow-black">
-            <Alarm size={28} className="text-white" />
-            <p className="mt-5 font-bold text-[26px] leading-[40px] text-white">
+          <div className="border border-black bg-white rounded-lg p-4 md:p-6">
+            <Alarm size={28} className="" />
+            <p className="mt-5 font-bold text-[26px] leading-[40px] ">
               Aceitamos visitas.
             </p>
-            <p className="font-normal text-lg leading-[28px] text-white">
+            <p className="font-normal text-lg leading-[28px] ">
               Das 8h até 18h
             </p>
           </div>
-          <div className="border-2 border-black bg-green-500 rounded-lg p-4 md:p-6 box-shadow-black">
-            <Info size={28} className="text-white" />
-            <p className="mt-5 font-bold text-[26px] leading-[40px] text-white">
+          <div className="border border-black bg-white rounded-lg p-4 md:p-6">
+            <Info size={28} className="" />
+            <p className="mt-5 font-bold text-[26px] leading-[40px] ">
               Final de semana:
             </p>
-            <p className="font-normal text-lg leading-[28px] text-white">
+            <p className="font-normal text-lg leading-[28px] ">
               Abertos das 8h até 18h
             </p>
           </div>
@@ -55,16 +55,16 @@ const InstituteProfile = () => {
           className="flex items-start gap-6 p-4 mb-5 md:px-14 
               absolute -top-[60px] flex-wrap"
         >
-          <div className="w-48 h-32 flex items-center justify-center bg-red-600 rounded-md m-auto border border-black ">
+          <div className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto border border-black ">
             <Image size={28} />
           </div>
-          <div className="w-48 h-32 flex items-center justify-center bg-blue-600 rounded-md m-auto border border-black ">
+          <div className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto border border-black ">
             <Image size={28} />
           </div>
-          <div className="w-48 h-32 flex items-center justify-center bg-yellow-400 rounded-md m-auto border border-black ">
+          <div className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto border border-black ">
             <Image size={28} />
           </div>
-          <div className="w-48 h-32 flex items-center justify-center bg-green-400 rounded-md m-auto border border-black ">
+          <div className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto border border-black ">
             <Image size={28} />
           </div>
         </div>

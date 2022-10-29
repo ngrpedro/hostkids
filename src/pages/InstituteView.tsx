@@ -7,10 +7,10 @@ const InstituteView = () => {
   const [mapView, setMapView] = useState(true);
   console.log(mapView);
   return (
-    <div className="h-screen">
-      <div className=" bg-[#F4F5F7] col-span-2 lg:h-72 grid grid-cols-1 md:grid-cols-2 p-4 md:p-10 gap-8">
+    <div className="h-screen space-y-10">
+      <div className=" bg-[#F4F5F7] col-span-2 lg:h-72 grid grid-cols-1 md:grid-cols-2 px-4 py-10 md:px-10 gap-8">
         <div className="flex flex-col items-start gap-8 m-auto">
-          <p className="font-extrabold text-[22px] md:text-[24px] sm:leading-[36px] tracking-[0.03em]">
+          <p className="text-[34px] font-bold leading-[54px] text-black">
             Encontre instituições de acolhimento infantil
           </p>
           <p className="font-semibold text-[16px] leading-[28px]">
@@ -39,6 +39,7 @@ const InstituteView = () => {
           </div>
         </div>
       </div>
+
       <div className="hidden md:grid grid-cols-1 md:grid-cols-2 ">
         <AllInstitutes />
         <AllPinsMap />
