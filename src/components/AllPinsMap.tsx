@@ -7,7 +7,7 @@ interface AllPinsMapProps {
   h: string;
 }
 
-const AllPinsMap = ({ w, h }: AllPinsMapProps) => {
+const AllPinsMap = () => {
   const position: [number, number][] = [
     [-21.1806395, -50.4204816],
     [-21.1916682, -50.4420556],
@@ -15,12 +15,12 @@ const AllPinsMap = ({ w, h }: AllPinsMapProps) => {
   ];
 
   return (
-    <div className="">
+    <div className="p-4">
       <MapContainer
         center={[-21.1839454, -50.4384078]}
         zoom={13}
         scrollWheelZoom={true}
-        style={{ width: `${w}`, height: `${h}` }}
+        style={{ width: "100%", height: "38rem"}}
       >
         <TileLayer
           url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicGVkcm8zOTkiLCJhIjoiY2w5ZzFpODZmMnY3dDQxbXZxems2cDYzMiJ9.ZO5_rVpmfVgQzIBfGCFN0g`}
