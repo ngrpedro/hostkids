@@ -35,11 +35,14 @@ const AllInstitutes = () => {
       <div className="hidden md:block">
         <InstituteFilter />
       </div>
-      <div className="my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+      <div className="my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
         {institutes.map((item, index) => {
           const { name, adress, openWeekends } = item;
           return (
-            <div key={index} className="border border-gray-200 bg-white rounded-xl overflow-hidden">
+            <div
+              key={index}
+              className="border border-gray-200 bg-white rounded-xl overflow-hidden"
+            >
               <div className="bg-gray-200">
                 <Image size={28} className="h-44 m-auto object-cover" />
               </div>
