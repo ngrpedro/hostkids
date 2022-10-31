@@ -43,7 +43,7 @@ const AllInstitutes = () => {
               <div className="bg-gray-200">
                 <Image size={28} className="h-44 m-auto object-cover" />
               </div>
-              <div className="p-4 space-y-2 md:space-y-4">
+              <div className="p-4 space-y-5 md:space-y-4">
                 {openWeekends ? (
                   <span className="rounded-full border border-green-900 bg-green-200 text-green-900 py-1 px-4 text-xs">
                     Finais de semana
