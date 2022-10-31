@@ -1,3 +1,10 @@
+import {
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList
+} from "@chakra-ui/react";
 import { Rows } from "phosphor-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -33,31 +40,30 @@ const NavBar = () => {
           );
         })}
       </div>
-      <div className="block md:hidden">
-        <button onClick={() => setOpen(!open)}>
-          <Rows size={28} />
-        </button>
 
-        {open ? (
-          <ul className="absolute top-[72px] rounded-bl-3xl shadow-2xl right-0 bg-white w-[60vw] h-[60vh]">
-            <li>
-              {menus.map((item, index) => {
-                return (
-                  <Link
-                    key={index}
-                    to={`/${item.view}`}
-                    onClick={() => setOpen(!open)}
-                    className="py-[22px] font-extrabold flex items-center justify-center gap-3"
-                  >
-                    {item.menu}
-                  </Link>
-                );
-              })}
-            </li>
-          </ul>
-        ) : (
-          ""
-        )}
+      <div className="block md:hidden">
+        <Menu>
+          <MenuButton
+            as={IconButton}
+            icon={<Rows size={28} />}
+            bgColor={"white"}
+            onClick={() => setOpen(!open)}
+          ></MenuButton>
+          <MenuList>
+            {menus.map((item, index) => {
+              return (
+                <Link
+                  key={index}
+                  to={`/${item.view}`}
+                  onClick={() => setOpen(!open)}
+                  className="px-5 py-3 font-extrabold flex items-center justify-center gap-3"
+                >
+                  <MenuItem> {item.menu}</MenuItem>
+                </Link>
+              );
+            })}
+          </MenuList>
+        </Menu>
       </div>
     </div>
   );
