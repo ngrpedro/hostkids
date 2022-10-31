@@ -1,6 +1,6 @@
-import { Input, InputGroup, InputRightElement } from "@chakra-ui/react";
-import { ArrowRight, Image, MagnifyingGlass } from "phosphor-react";
+import { ArrowRight, Image } from "phosphor-react";
 import { Link } from "react-router-dom";
+import InstituteFilter from "./InstituteFilter";
 
 const AllInstitutes = () => {
   const institutes = [
@@ -32,23 +32,14 @@ const AllInstitutes = () => {
   ];
   return (
     <div>
-      <div className="grid grid-cols-2 items-center justify-center">
-        <InputGroup>
-          <Input
-            placeholder="Pesquise pelo nome"
-            _focusVisible={{ borderColor: "#FFBD12" }}
-          />
-          <InputRightElement children={<MagnifyingGlass size={18} />} />
-        </InputGroup>
+      <div className="">
+        <InstituteFilter />
       </div>
       <div className="my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
         {institutes.map((item, index) => {
           const { name, adress, openWeekends } = item;
           return (
-            <div
-              key={index}
-              className="bg-white rounded-xl overflow-hidden"
-            >
+            <div key={index} className="bg-white rounded-xl overflow-hidden">
               <div className="bg-gray-200">
                 <Image size={28} className="h-44 m-auto object-cover" />
               </div>
