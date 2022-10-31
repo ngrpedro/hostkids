@@ -17,7 +17,7 @@ const InstituteFilterButtonIcon = () => {
 
   return (
     <div>
-      <div className="p-4" onClick={onOpen}>
+      <div className="p-2" onClick={onOpen}>
         <FadersHorizontal size={28} />
       </div>
 

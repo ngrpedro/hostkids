@@ -1,8 +1,11 @@
 import { Alarm, ArrowLeft, Image, Info, WhatsappLogo } from "phosphor-react";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
+import mapIcon from "../utils/mapIcon";
 
 const InstituteProfile = () => {
+  const position: [number, number][] = [[-21.1806395, -50.4204816]];
+
   return (
     <div>
       <header
@@ -96,18 +99,56 @@ const InstituteProfile = () => {
         </div>
 
         <div
-          className="flex flex-col items-center justify-start rounded-2xl mx-12
-                    border border-gray-300 cursor-pointer hover:bg-slate-50 
-                    transition-colors hover:shadow-sm"
+          className="flex flex-col items-center justify-start rounded-2xl mx-12 cursor-pointer group"
         >
-          <div className="w-full h-[20rem] bg-gray-200 rounded-t-2xl"></div>
-          <p className="py-5 font-semibold text-sm text-slate-600">
+          <div className="w-full h-[20rem] bg-gray-200 rounded-t-2xl">
+            <MapContainer
+              center={[-21.1839454, -50.4384078]}
+              zoom={13}
+              scrollWheelZoom={true}
+              style={{ width: "100%", height: "20rem" }}
+            >
+              <TileLayer
+                url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicGVkcm8zOTkiLCJhIjoiY2w5ZzFpODZmMnY3dDQxbXZxems2cDYzMiJ9.ZO5_rVpmfVgQzIBfGCFN0g`}
+              />
+
+              {position.map((loc, index) => {
+                return (
+                  <Marker key={index} position={loc} icon={mapIcon}>
+                    <Popup
+                      closeButton={false}
+                      minWidth={240}
+                      maxWidth={240}
+                      className={"font-bold"}
+                    >
+                      <p>Inst. Amor e Carinho</p>
+                      <Link to="/InstituteProfile">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          className="w-4 h-"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                          />
+                        </svg>
+                      </Link>
+                    </Popup>
+                  </Marker>
+                );
+              })}
+            </MapContainer>
+          </div>
+          <p className="py-5 font-semibold text-sm text-slate-600 group-hover:text-blue-600">
             Ver rotas no Google Maps
           </p>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };

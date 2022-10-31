@@ -35,7 +35,7 @@ const AllInstitutes = () => {
       <div className="hidden md:block">
         <InstituteFilter />
       </div>
-      <div className="my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+      <div className="my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
         {institutes.map((item, index) => {
           const { name, adress, openWeekends } = item;
           return (

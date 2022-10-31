@@ -9,7 +9,7 @@ const InstituteView = () => {
 
   return (
     <div className="space-y-10 mb-16">
-      <div className="px-4 py-10 md:px-10  bg-[#F4F5F7] col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="px-4 py-10 md:px-16  bg-[#F4F5F7] col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex flex-col items-start gap-8 m-auto">
           <p className="text-[34px] font-bold leading-[54px] text-black">
             Encontre instituições e entidades em Araçatuba
@@ -28,14 +28,16 @@ const InstituteView = () => {
           </div>
         </div>
       </div>
-      <div className="px-4 md:px-6">
+      <div className="px-4 md:px-16">
         <div className="flex items-center justify-between">
           <p className="font-semibold text-[22px] leading-[28px]">
             Veja nossos parceiros:
           </p>
-          <div className="flex items-end md:hidden">
-            <InstituteFilterButtonIcon />
-            <div className="p-4">
+          <div className="flex items-end">
+            <div className=" block md:hidden">
+              <InstituteFilterButtonIcon />
+            </div>
+            <div className="p-2 hover:bg-slate-200 rounded-md cursor-pointer">
               {mapView ? (
                 <StackSimple
                   size={28}
