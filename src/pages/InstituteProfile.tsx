@@ -6,23 +6,23 @@ const InstituteProfile = () => {
   return (
     <div>
       <header
-        className="bg-[#F4F5F7]  p-8 md:pt-20 pb-28 md:px-14 
+        className="bg-[#F4F5F7]  p-8 md:pt-10 pb-28 md:px-14 
                 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8"
       >
-        <div className="md:hidden">
+        <div className="col-span-1 md:col-span-2">
           <Link to="/InstituteView">
-            <ArrowLeft size={28} color={"#fff"} />
+            <ArrowLeft size={26} color={"#000"} />
           </Link>
         </div>
         <div className="flex flex-col items-start justify-start gap-6">
           <h1 className="text-[34px] font-bold leading-[54px] text-black">
             Inst. Cuidado e Amor
           </h1>
-          <p className="text-lg leading-[28px] text-black">
+          <p className="text-md leading-[28px] text-black">
             Exercitation laborum labore minim excepteur incididunt quis enim.
             Labore est occaecat veniam.
           </p>
-          <p className="text-lg leading-[28px] text-black">
+          <p className="text-md leading-[28px] text-black">
             Nulla et mollit officia nulla magna incididunt in velit officia.
             Lorem sint fugiat sit sint esse ipsum minim id magna officia.
           </p>
@@ -31,21 +31,20 @@ const InstituteProfile = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 items-center gap-5">
           <div className="border border-black bg-white rounded-lg p-4 md:p-6">
             <Alarm size={28} className="" />
-            <p className="mt-5 font-bold text-[26px] leading-[40px] ">
-              Aceitamos visitas.
-            </p>
-            <p className="font-normal text-lg leading-[28px] ">
-              Das 8h até 18h
-            </p>
+            <p className="mt-5 font-bold text-[16px]">82% Lorem ipson</p>
           </div>
           <div className="border border-black bg-white rounded-lg p-4 md:p-6">
             <Info size={28} className="" />
-            <p className="mt-5 font-bold text-[26px] leading-[40px] ">
-              Final de semana:
-            </p>
-            <p className="font-normal text-lg leading-[28px] ">
-              Abertos das 8h até 18h
-            </p>
+            <p className="mt-5 font-bold text-[16px]">35% Lorem ipson</p>
+          </div>
+
+          <div className="border border-black bg-white rounded-lg p-4 md:p-6">
+            <Info size={28} className="" />
+            <p className="mt-5 font-bold text-[16px]">35% Lorem ipson</p>
+          </div>
+          <div className="border border-black bg-white rounded-lg p-4 md:p-6">
+            <Alarm size={28} className="" />
+            <p className="mt-5 font-bold text-[16px]">82% Lorem ipson</p>
           </div>
         </div>
       </header>
