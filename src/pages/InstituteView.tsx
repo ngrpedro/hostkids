@@ -1,6 +1,7 @@
 import { Image } from "phosphor-react";
 import { useState } from "react";
 import AllInstitutes from "../components/AllInstitutes";
+import InstituteFilterButtonIcon from "../components/InstituteFilterButtonIcon";
 
 const InstituteView = () => {
   const [mapView, setMapView] = useState(true);
@@ -24,9 +25,14 @@ const InstituteView = () => {
         </div>
       </div>
       <div className="px-4 md:px-6">
-        <p className="font-semibold text-[22px] leading-[28px]">
-          Veja nossos parceiros:
-        </p>
+        <div className="flex items-center justify-between">
+          <p className="font-semibold text-[22px] leading-[28px]">
+            Veja nossos parceiros:
+          </p>
+          <div className="block md:hidden">
+            <InstituteFilterButtonIcon />
+          </div>
+        </div>
 
         <AllInstitutes />
       </div>
