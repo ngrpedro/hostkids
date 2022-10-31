@@ -32,7 +32,7 @@ const Home = () => {
               className="font-extrabold text-[34px] md:text-[34px] max-w-[484px]
             leading-[55px] sm:leading-[56px] tracking-[0.03em]"
             >
-              Encontre instituições de acolhimento infantil
+              Encontre instituições e entidades em Araçatuba
             </p>
             <p className="font-semibold text-[16px] leading-[28px] max-w-lg">
               Tenha acesso as informações de instituições de acolhimento

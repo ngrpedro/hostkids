@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^2.3.6",
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@types/react-leaflet": "^2.8.2",
     "framer-motion": "^6.5.1",
     "leaflet": "^1.9.2",

@@ -1,16 +1,16 @@
 import { Info } from "phosphor-react";
 import { useState } from "react";
 import AllInstitutes from "../components/AllInstitutes";
-import AllPinsMap from "../components/AllPinsMap";
 
 const InstituteView = () => {
   const [mapView, setMapView] = useState(true);
+
   return (
     <div className="h-screen space-y-10 mb-16">
-      <div className=" bg-[#F4F5F7] col-span-2 lg:h-72 grid grid-cols-1 md:grid-cols-2 px-4 py-10 md:px-10 gap-8">
+      <div className="px-4 py-10 md:px-10  bg-[#F4F5F7] col-span-2 lg:h-72 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex flex-col items-start gap-8 m-auto">
           <p className="text-[34px] font-bold leading-[54px] text-black">
-            Encontre instituições de acolhimento infantil
+            Encontre instituições e entidades em Araçatuba
           </p>
           <p className="font-semibold text-[16px] leading-[28px]">
             Tenha acesso as informações de instituições de acolhimento infantil
@@ -38,44 +38,12 @@ const InstituteView = () => {
           </div>
         </div>
       </div>
-      <div className="px-4 md:px-10">
+      <div className="px-4 md:px-6">
         <p className="font-semibold text-[22px] leading-[28px]">
           Veja nossos parceiros:
         </p>
-      </div>
 
-      <div className="hidden md:grid grid-cols-1 md:grid-cols-2 px-4 md:px-6">
         <AllInstitutes />
-        <AllPinsMap />
-      </div>
-
-      {/* *********
-       ********** */}
-      <div className="md:hidden">
-        <div className="col-span-2 flex items-center justify-center p-4">
-          <button
-            className={`p-2 text-sm font-semibold rounded-l-2xl w-full ${
-              mapView
-                ? "bg-[#bac7fc] border border-[#122aff] text-[#122aff]"
-                : "bg-gray-200"
-            }`}
-            onClick={() => setMapView(true)}
-          >
-            Ver Mapa
-          </button>
-          <button
-            className={`p-2 text-sm font-semibold rounded-r-2xl w-full ${
-              !mapView
-                ? "bg-[#bac7fc] border border-[#122aff] text-[#122aff]"
-                : "bg-gray-200"
-            }`}
-            onClick={() => setMapView(false)}
-          >
-            Ver Lista
-          </button>
-        </div>
-
-        {mapView ? <AllPinsMap /> : <AllInstitutes />}
       </div>
     </div>
   );
