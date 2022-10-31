@@ -39,7 +39,7 @@ const AllInstitutes = () => {
         {institutes.map((item, index) => {
           const { name, adress, openWeekends } = item;
           return (
-            <div key={index} className="bg-white rounded-xl overflow-hidden">
+            <div key={index} className="border border-gray-200 bg-white rounded-xl overflow-hidden">
               <div className="bg-gray-200">
                 <Image size={28} className="h-44 m-auto object-cover" />
               </div>
