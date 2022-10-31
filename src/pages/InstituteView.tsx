@@ -1,10 +1,11 @@
 import { Image, MapTrifold } from "phosphor-react";
 import { useState } from "react";
 import AllInstitutes from "../components/AllInstitutes";
+import AllPinsMap from "../components/AllPinsMap";
 import InstituteFilterButtonIcon from "../components/InstituteFilterButtonIcon";
 
 const InstituteView = () => {
-  const [mapView, setMapView] = useState(true);
+  const [mapView, setMapView] = useState(false);
 
   return (
     <div className="space-y-10 mb-16">
@@ -35,12 +36,17 @@ const InstituteView = () => {
           <div className="flex items-end md:hidden">
             <InstituteFilterButtonIcon />
             <div className="p-4">
-              <MapTrifold size={28} />
+              <MapTrifold
+                size={28}
+                onClick={() => {
+                  setMapView(!mapView);
+                }}
+              />
             </div>
           </div>
         </div>
 
-        <AllInstitutes />
+        {mapView ? <AllPinsMap /> : <AllInstitutes />}
       </div>
     </div>
   );
