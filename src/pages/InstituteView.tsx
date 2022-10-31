@@ -1,4 +1,4 @@
-import { Image } from "phosphor-react";
+import { Image, MapTrifold } from "phosphor-react";
 import { useState } from "react";
 import AllInstitutes from "../components/AllInstitutes";
 import InstituteFilterButtonIcon from "../components/InstituteFilterButtonIcon";
@@ -19,8 +19,10 @@ const InstituteView = () => {
           </p>
         </div>
         <div className="min-h-[15rem]">
-          <div className="flex items-center justify-center border border-black 
-                        rounded-lg p-4 md:p-6 bg-gray-50 w-full h-full">
+          <div
+            className="flex items-center justify-center border border-black 
+                        rounded-lg p-4 md:p-6 bg-gray-50 w-full h-full"
+          >
             <Image size={68} />
           </div>
         </div>
@@ -30,8 +32,11 @@ const InstituteView = () => {
           <p className="font-semibold text-[22px] leading-[28px]">
             Veja nossos parceiros:
           </p>
-          <div className="block md:hidden">
+          <div className="flex items-end md:hidden">
             <InstituteFilterButtonIcon />
+            <div className="p-4">
+              <MapTrifold size={28} />
+            </div>
           </div>
         </div>
 
