@@ -24,7 +24,7 @@ interface GetInstitutesQueryResponse {
 
 export const AllInstitutes = () => {
   const { data } = useQuery<GetInstitutesQueryResponse>(GET_INSTITUTES_QUERY);
-  console.log(data?.allInstitutes);
+  /* console.log(data?.allInstitutes); */
 
   return (
     <div>

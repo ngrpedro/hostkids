@@ -1,9 +1,28 @@
+import { gql, useQuery } from "@apollo/client";
 import { Alarm, ArrowLeft, Image, Info, WhatsappLogo } from "phosphor-react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { Link } from "react-router-dom";
 import mapIcon from "../utils/mapIcon";
 
+const GET_INSTITUTE_QUERY = gql`
+  query {
+    institute(filter: { id: { in: "47629120" } }) {
+      name
+      description
+    }
+  }
+`;
+interface GetInstituteQueryResponse {
+  institute: {
+    name: string;
+    adress: string;
+    description: string;
+  };
+}
+
 const InstituteProfile = () => {
+  const { data } = useQuery<GetInstituteQueryResponse>(GET_INSTITUTE_QUERY);
+
   const position: [number, number][] = [[-21.1806395, -50.4204816]];
 
   return (
@@ -19,15 +38,13 @@ const InstituteProfile = () => {
         </div>
         <div className="flex flex-col items-start justify-start gap-6">
           <h1 className="text-[34px] font-bold leading-[54px] text-black">
-            Inst. Cuidado e Amor
+            {data?.institute.name}
           </h1>
           <p className="text-md leading-[28px] text-black">
-            Exercitation laborum labore minim excepteur incididunt quis enim.
-            Labore est occaecat veniam.
+            {data?.institute.description}
           </p>
           <p className="text-md leading-[28px] text-black">
-            Nulla et mollit officia nulla magna incididunt in velit officia.
-            Lorem sint fugiat sit sint esse ipsum minim id magna officia.
+            {data?.institute.description}
           </p>
         </div>
 
@@ -98,9 +115,7 @@ const InstituteProfile = () => {
           </p>
         </div>
 
-        <div
-          className="flex flex-col items-center justify-start rounded-2xl mx-12 cursor-pointer group"
-        >
+        <div className="flex flex-col items-center justify-start rounded-2xl mx-12 cursor-pointer group">
           <div className="w-full h-[20rem] bg-gray-200 rounded-t-2xl">
             <MapContainer
               center={[-21.1839454, -50.4384078]}
