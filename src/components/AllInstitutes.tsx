@@ -10,6 +10,9 @@ const GET_INSTITUTES_QUERY = gql`
       name
       adress
       description
+      images {
+        url
+      }
     }
   }
 `;
@@ -19,6 +22,9 @@ interface GetInstitutesQueryResponse {
     name: string;
     adress: string;
     description: string;
+    images: {
+      url: string;
+    };
   }[];
 }
 
@@ -52,7 +58,7 @@ export const AllInstitutes = () => {
                 </div>
 
                 <Link
-                  to="/InstituteProfile"
+                  to={`/InstituteView/${item.id}`}
                   className="flex items-start justify-start gap-2 hover:underline underline-offset-1"
                 >
                   <p className="text-xs text-slate-600">Conhecer</p>

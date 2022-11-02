@@ -1,27 +1,38 @@
 import { gql, useQuery } from "@apollo/client";
-import { Alarm, ArrowLeft, Image, Info, WhatsappLogo } from "phosphor-react";
+import { Alarm, ArrowLeft, Info, WhatsappLogo } from "phosphor-react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import mapIcon from "../utils/mapIcon";
 
 const GET_INSTITUTE_QUERY = gql`
   query {
-    institute(filter: { id: { in: "47629120" } }) {
+    institute(filter: { id: { in: "47634787" } }) {
+      id
       name
+      adress
       description
+      images {
+        url
+      }
     }
   }
 `;
 interface GetInstituteQueryResponse {
   institute: {
+    id: string;
     name: string;
     adress: string;
     description: string;
+    images: {
+      url: string;
+    }[];
   };
 }
 
 const InstituteProfile = () => {
+  const { id } = useParams<{ id: string }>();
   const { data } = useQuery<GetInstituteQueryResponse>(GET_INSTITUTE_QUERY);
+  console.log(data?.institute.images[0].url);
 
   const position: [number, number][] = [[-21.1806395, -50.4204816]];
 
@@ -69,23 +80,56 @@ const InstituteProfile = () => {
         </div>
       </header>
 
-      <div className="relative hidden md:block">
+      <div className="relative">
         <div
-          className="flex items-start gap-6 p-4 mb-5 md:px-14 
-              absolute -top-[60px] flex-wrap"
+          className="p-4 mb-5 md:px-14 absolute -top-[60px]
+                  flex items-center overflow-auto gap-6 h-[220px]"
         >
-          <div className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto border border-black ">
-            <Image size={28} />
-          </div>
-          <div className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto border border-black ">
-            <Image size={28} />
-          </div>
-          <div className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto border border-black ">
-            <Image size={28} />
-          </div>
-          <div className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto border border-black ">
-            <Image size={28} />
-          </div>
+          <img
+            src={data?.institute.images[0].url}
+            alt=""
+            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+          />
+          <img
+            src={data?.institute.images[1].url}
+            alt=""
+            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+          />
+          <img
+            src={data?.institute.images[2].url}
+            alt=""
+            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+          />
+          <img
+            src={data?.institute.images[3].url}
+            alt=""
+            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+          />
+          <img
+            src={data?.institute.images[2].url}
+            alt=""
+            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+          />
+          <img
+            src={data?.institute.images[1].url}
+            alt=""
+            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+          />
+          <img
+            src={data?.institute.images[0].url}
+            alt=""
+            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+          />
+          <img
+            src={data?.institute.images[2].url}
+            alt=""
+            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+          />
+          <img
+            src={data?.institute.images[3].url}
+            alt=""
+            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+          />
         </div>
       </div>
 
