@@ -1,6 +1,6 @@
 import { Image, MapTrifold, StackSimple } from "phosphor-react";
 import { useState } from "react";
-import AllInstitutes from "../components/AllInstitutes";
+import { AllInstitutes } from "../components/AllInstitutes";
 import AllPinsMap from "../components/AllPinsMap";
 import InstituteFilterButtonIcon from "../components/InstituteFilterButtonIcon";
 

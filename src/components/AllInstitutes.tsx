@@ -1,70 +1,58 @@
+import { gql, useQuery } from "@apollo/client";
 import { ArrowRight, Image } from "phosphor-react";
 import { Link } from "react-router-dom";
 import InstituteFilter from "./InstituteFilter";
 
-const AllInstitutes = () => {
-  const institutes = [
-    {
-      name: "Caminho das ciranças",
-      adress: "Rua Santos Bilac, 6584 - Monterrey",
-      openWeekends: true,
-    },
-    {
-      name: "Crianças e alegria",
-      adress: "Rua Santos Bilac, 6584 - Monterrey",
-      openWeekends: false,
-    },
-    {
-      name: "Sempre juntos",
-      adress: "Rua Santos Bilac, 6584 - Monterrey",
-      openWeekends: false,
-    },
-    {
-      name: "Sempre juntos",
-      adress: "Rua Santos Bilac, 6584 - Monterrey",
-      openWeekends: true,
-    },
-    {
-      name: "Sempre juntos",
-      adress: "Rua Santos Bilac, 6584 - Monterrey",
-      openWeekends: false,
-    },
-  ];
+const GET_INSTITUTES_QUERY = gql`
+  query {
+    allInstitutes {
+      id
+      name
+      adress
+      description
+    }
+  }
+`;
+interface GetInstitutesQueryResponse {
+  allInstitutes: {
+    id: string;
+    name: string;
+    adress: string;
+    description: string;
+  }[];
+}
+
+export const AllInstitutes = () => {
+  const { data } = useQuery<GetInstitutesQueryResponse>(GET_INSTITUTES_QUERY);
+  console.log(data?.allInstitutes);
+
   return (
     <div>
       <div className="hidden md:block">
         <InstituteFilter />
       </div>
       <div className="my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-        {institutes.map((item, index) => {
-          const { name, adress, openWeekends } = item;
+        {data?.allInstitutes.map((item) => {
           return (
             <div
-              key={index}
+              key={item.id}
               className="border border-gray-200 bg-white rounded-xl overflow-hidden"
             >
               <div className="bg-gray-200">
                 <Image size={28} className="h-44 m-auto object-cover" />
               </div>
               <div className="p-4 space-y-5 md:space-y-4">
-                {openWeekends ? (
-                  <span className="rounded-full border border-green-900 bg-green-200 text-green-900 py-1 px-4 text-xs">
-                    Finais de semana
-                  </span>
-                ) : (
-                  ""
-                )}
                 <div className="space-y-2">
                   <div className="block mt-1 text-xs leading-tight font-medium text-black">
-                    {name}
+                    {item.name}
                   </div>
                   <p className="mt-2 text-xs text-slate-600 max-w-xs">
-                    {adress}
+                    {item.adress}
                   </p>
                 </div>
 
                 <Link
-                  to="/"
+                  to="/InstituteProfile"
                   className="flex items-start justify-start gap-2 hover:underline underline-offset-1"
                 >
                   <p className="text-xs text-slate-600">Conhecer</p>
@@ -78,5 +66,3 @@ const AllInstitutes = () => {
     </div>
   );
 };
-
-export default AllInstitutes;
