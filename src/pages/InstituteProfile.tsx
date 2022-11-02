@@ -32,7 +32,6 @@ interface GetInstituteQueryResponse {
 const InstituteProfile = () => {
   const { id } = useParams<{ id: string }>();
   const { data } = useQuery<GetInstituteQueryResponse>(GET_INSTITUTE_QUERY);
-  console.log(data?.institute.images[0].url);
 
   const position: [number, number][] = [[-21.1806395, -50.4204816]];
 
@@ -59,21 +58,21 @@ const InstituteProfile = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 items-center gap-5">
-          <div className="border border-black bg-white rounded-lg p-4 md:p-6">
+        <div className="grid grid-cols-2 items-center gap-5">
+          <div className="border border-black bg-white rounded-lg p-4 md:p-6 w-full h-full">
             <Alarm size={28} className="" />
             <p className="mt-5 font-bold text-[16px]">82% Lorem ipson</p>
           </div>
-          <div className="border border-black bg-white rounded-lg p-4 md:p-6">
+          <div className="border border-black bg-white rounded-lg p-4 md:p-6 w-full h-full">
             <Info size={28} className="" />
             <p className="mt-5 font-bold text-[16px]">35% Lorem ipson</p>
           </div>
 
-          <div className="border border-black bg-white rounded-lg p-4 md:p-6">
+          <div className="border border-black bg-white rounded-lg p-4 md:p-6 w-full h-full">
             <Info size={28} className="" />
             <p className="mt-5 font-bold text-[16px]">35% Lorem ipson</p>
           </div>
-          <div className="border border-black bg-white rounded-lg p-4 md:p-6">
+          <div className="border border-black bg-white rounded-lg p-4 md:p-6 w-full h-full">
             <Alarm size={28} className="" />
             <p className="mt-5 font-bold text-[16px]">82% Lorem ipson</p>
           </div>
@@ -133,7 +132,7 @@ const InstituteProfile = () => {
         </div>
       </div>
 
-      <main className="my-36 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0">
+      <main className="my-48 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0">
         <div className="flex flex-col items-start justify-start gap-6 p-4 md:px-10">
           <div className="flex items-center justify-between w-full">
             <h1 className="text-[28px] font-bold leading-[54px] text-black">

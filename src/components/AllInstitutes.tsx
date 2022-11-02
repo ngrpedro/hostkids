@@ -1,5 +1,4 @@
 import { gql, useQuery } from "@apollo/client";
-import { ArrowRight, Image } from "phosphor-react";
 import { Link } from "react-router-dom";
 import InstituteFilter from "./InstituteFilter";
 
@@ -24,7 +23,7 @@ interface GetInstitutesQueryResponse {
     description: string;
     images: {
       url: string;
-    };
+    }[];
   }[];
 }
 
@@ -38,34 +37,26 @@ export const AllInstitutes = () => {
         <InstituteFilter />
       </div>
       <div className="my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-        {data?.allInstitutes.map((item) => {
+        {data?.allInstitutes.map((item, index) => {
           return (
-            <div
-              key={item.id}
-              className="border border-gray-200 bg-white rounded-xl overflow-hidden"
-            >
-              <div className="bg-gray-200">
-                <Image size={28} className="h-44 m-auto object-cover" />
-              </div>
-              <div className="p-4 space-y-5 md:space-y-4">
-                <div className="space-y-2">
-                  <div className="block mt-1 text-xs leading-tight font-medium text-black">
-                    {item.name}
-                  </div>
-                  <p className="mt-2 text-xs text-slate-600 max-w-xs">
-                    {item.adress}
-                  </p>
+            <Link key={item.id} to={`/InstituteView/${item.id}`}>
+              <div className="border border-gray-200 bg-white rounded-xl overflow-hidden h-full hover:shadow-md transition-all delay-100">
+                <div className="bg-gray-200">
+                  <img src={item.images[index].url} alt="teste" />
                 </div>
+                <div className="p-4 space-y-5 md:space-y-4">
+                  <div className="space-y-2">
+                    <div className="block mt-1 text-md leading-tight font-semibold text-black">
+                      {item.name}
+                    </div>
+                    <p className="mt-2 text-xs text-slate-900 max-w-xs">
+                      {item.adress}
+                    </p>
+                  </div>
 
-                <Link
-                  to={`/InstituteView/${item.id}`}
-                  className="flex items-start justify-start gap-2 hover:underline underline-offset-1"
-                >
-                  <p className="text-xs text-slate-600">Conhecer</p>
-                  <ArrowRight size={16} className="text-slate-600" />
-                </Link>
+                </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
