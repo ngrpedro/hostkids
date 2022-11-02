@@ -1,4 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
+import { Check } from "phosphor-react";
 import { Link } from "react-router-dom";
 import InstituteFilter from "./InstituteFilter";
 
@@ -12,6 +13,8 @@ const GET_INSTITUTES_QUERY = gql`
       images {
         url
       }
+      openOnWeekends
+      category
     }
   }
 `;
@@ -24,6 +27,8 @@ interface GetInstitutesQueryResponse {
     images: {
       url: string;
     }[];
+    openOnWeekends: boolean;
+    category: string;
   }[];
 }
 
@@ -41,8 +46,19 @@ export const AllInstitutes = () => {
           return (
             <Link key={item.id} to={`/InstituteView/${item.id}`}>
               <div className="border border-gray-200 bg-white rounded-xl overflow-hidden h-full hover:shadow-md transition-all delay-100">
-                <div className="bg-gray-200">
+                <div className="bg-gray-200 relative">
                   <img src={item.images[index].url} alt="teste" />
+                  {item.openOnWeekends ? (
+                    <div
+                      className="flex items-start justify-start gap-1 py-1 px-3 text-[12px]
+                              absolute top-2 left-2 bg-green-200 bg-opacity-70 border 
+                              border-green-900 text-green-900 rounded-full"
+                    >
+                      Finais de semana <Check size={16} />
+                    </div>
+                  ) : (
+                    ""
+                  )}
                 </div>
                 <div className="p-4 space-y-5 md:space-y-4">
                   <div className="space-y-2">
@@ -53,7 +69,6 @@ export const AllInstitutes = () => {
                       {item.adress}
                     </p>
                   </div>
-
                 </div>
               </div>
             </Link>
