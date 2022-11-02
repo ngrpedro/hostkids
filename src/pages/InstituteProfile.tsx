@@ -80,56 +80,58 @@ const InstituteProfile = () => {
       </header>
 
       <div className="relative">
-        <div
-          className="p-4 mb-5 md:px-14 absolute -top-[60px]
+        {data?.institute.images && (
+          <div
+            className="p-4 mb-5 md:px-14 absolute -top-[60px]
                   flex items-center overflow-auto gap-6 h-[220px]"
-        >
-          <img
-            src={data?.institute.images[0].url}
-            alt=""
-            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
-          />
-          <img
-            src={data?.institute.images[1].url}
-            alt=""
-            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
-          />
-          <img
-            src={data?.institute.images[2].url}
-            alt=""
-            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
-          />
-          <img
-            src={data?.institute.images[3].url}
-            alt=""
-            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
-          />
-          <img
-            src={data?.institute.images[2].url}
-            alt=""
-            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
-          />
-          <img
-            src={data?.institute.images[1].url}
-            alt=""
-            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
-          />
-          <img
-            src={data?.institute.images[0].url}
-            alt=""
-            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
-          />
-          <img
-            src={data?.institute.images[2].url}
-            alt=""
-            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
-          />
-          <img
-            src={data?.institute.images[3].url}
-            alt=""
-            className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
-          />
-        </div>
+          >
+            <img
+              src={data?.institute.images[0].url}
+              alt=""
+              className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+            />
+            <img
+              src={data?.institute.images[1].url}
+              alt=""
+              className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+            />
+            <img
+              src={data?.institute.images[2].url}
+              alt=""
+              className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+            />
+            <img
+              src={data?.institute.images[0].url}
+              alt=""
+              className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+            />
+            <img
+              src={data?.institute.images[1].url}
+              alt=""
+              className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+            />
+            <img
+              src={data?.institute.images[2].url}
+              alt=""
+              className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+            />
+            <img
+              src={data?.institute.images[0].url}
+              alt=""
+              className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+            />
+            <img
+              src={data?.institute.images[1].url}
+              alt=""
+              className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+            />
+            <img
+              src={data?.institute.images[2].url}
+              alt=""
+              className="w-48 h-32 flex items-center justify-center bg-white rounded-md m-auto shadow-lg cursor-pointer transition-all delay-150 hover:scale-150"
+            />
+          </div>
+        )}
       </div>
 
       <main className="my-48 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0">
